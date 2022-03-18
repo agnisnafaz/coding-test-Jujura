@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('register', 'PenggunaController@register'); //untuk register
+Route::get('index', 'ControllerPenggunaController@index'); //untuk menampilkan data yang sudah diregister
+Route::get('indexproduct', 'ProductController@index'); //untuk menampilkan data product
+Route::post('insert', 'ProductController@insert'); //untuk menambahkan data product
+Route::post('salesinsert', 'SalesController@salesinsert'); //untuk sales insert
